@@ -1,0 +1,533 @@
+/*  Author VB, project build based on class modules at Birkbeck University of London, "all right reserved" */
+
+/* Embed the fonts before anything else */
+@font-face {
+    font-family: 'roboto slabbold';
+    src: url('../fonts/RobotoSlab-Bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Reset */
+
+html, body, h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, li , figure, figcaption, form, fieldset, label, legend, dl, dt, dd{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+
+img {
+	border:none;
+}
+
+ul, ol {
+	list-style-type: none;
+}
+
+/* defaults */
+
+body {
+    font-family: Arial, Verdana, Geneva, sans-serif;
+    color: #04080b; 
+    background-color: #ffffff;
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    color: #714f2b;
+	font-family: 'roboto slabbold', Geogia, Serif;
+}
+
+h2{
+	font-size: 2em;
+	margin-bottom: 0.25em;
+}
+
+h3{
+	font-size: 1.5em
+}
+
+a:link, a:visited {
+    color: #2b4c71;
+}
+
+a:hover, a:focus {
+    color: #4C712B;
+}
+
+/* Page Styling */
+
+#page {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#pageheader {
+    overflow: hidden;
+	padding: 1em 0;
+}
+
+ /* Logo styling */
+ 
+#pageheader h1 {
+    float: left;
+	font-size: 3em;
+	color: #203954;
+	text-shadow: 2px 2px 0 #999999;
+}
+
+#pageheader h1 span{
+	color: #4c712b;
+}
+
+/* Primary Nav bar */
+
+#pageheader nav {
+    float: right;
+	padding: 1.25em;
+}
+
+#pageheader nav li {
+    float: left;
+    margin-right: 1em;
+    font-weight: 700;
+}
+
+#pageheader nav li:last-child{
+	margin-right: 0;
+}
+
+#pageheader nav li a{
+	float: left;
+	background-color: #2b4c71;
+	color: #ffffff;
+	display: block;
+	border-radius: 0.375em;
+	padding: 0.25em 1.25em 0.375em 1.25em;
+	text-decoration: none;
+}
+
+#pageheader nav li.currentpage a {
+    background-color: #4c712b;
+}
+
+#pageheader nav li a:focus, #pageheader nav li a:hover {
+    background-color: #4c712b;
+    color: #ffff00;
+}
+
+
+/* Breadcrumbs */
+
+#breadcrumbs {
+    font-size: 0.75em;
+    padding-bottom: 0.5em;
+    font-style: italic;
+}
+
+/* website introduction */
+
+#introduction {
+    overflow: hidden;
+	padding: 1em 0px;
+}
+
+#introduction  #imagewrapper {
+    float: right;
+    margin-left:2%;
+    border: 4px solid #cad2db;
+    border-radius: 0.375em;
+	width: 50%;
+	text-align: right;
+}
+
+#introduction img{
+	max-width: 100%;
+}
+
+#introduction p{
+	font-size: 1.5em;
+	font-family: 'roboto slabbold', Geogia, Serif;
+}
+
+#introduction a{
+	text-decoration: none;
+}
+
+/* latest news block */
+
+#latestnews {
+    width: 49%;
+    float: left;
+	padding-top: 1em;
+	padding-bottom: 2em;
+}
+
+#lastestnews article{
+	margin-bottom: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #cad2db;
+}
+
+#latestnews article a{
+	text-decoration: none;
+}
+
+
+/* press coverage block */
+
+#presscoverage {
+    width: 49%;
+    float: right;
+	background-color: #e2e7ec;
+	border-radius: 0.375em;
+	box-shadow: 2px 2px 0 #999999;
+	margin-bottom: 2em;
+}
+
+#presscoverage .inner{
+	padding: 1em;
+}
+
+#presscoverage blockquote{
+	margin-bottom: 1em;
+	font-style: italic;
+}
+
+
+/* Page footer style */
+
+#pagefooter {
+    clear: both;
+    overflow: hidden;
+	font-size: 0.875em;
+	background-color: #203955;
+	color: #cad2db;
+	border-radius: 0.375em;
+	padding: 1em;
+	margin-bottom: 1em;	
+}
+
+
+#pagefooter a:link, #pagefooter a:visited {
+    color: #cad2DB;
+    text-decoration: none;
+}
+
+#pagefooter p {
+    float: left;
+}
+
+#pagefooter ul {
+    float: right;
+}
+
+#pagefooter li {
+    float: left;
+	padding-right: 1em;
+	margin-right: 1em;
+	border-right: 1px solid #cad2db
+}
+
+#pagefooter li:last-child{
+	padding-right: 0;
+	margin-right: 0;
+	border: none;
+}
+
+
+#columncontainer #content {
+    width: 73.5%;
+    float: right;
+	padding-bottom: 2em;
+}
+
+#pagesidebar {
+    width: 24.5%;
+    float: left;
+    background-color: #e2e7ec;
+    border-radius: 0.375em;
+    box-shadow: 2px 2px 0 #999999;
+    margin-bottom: 2em;
+}
+
+
+#pagesidebar nav,
+#pagesidebar section {
+    padding: 1em 1em 0 1em;
+}
+
+#pagesidebar h2{
+	font-size: 1.25em;
+}
+
+
+#pagesidebar nav ul li {
+    border-bottom: 1px solid #96a6b9;
+}
+
+#pagesidebar nav ul li:first-child {
+    border-top: 1px solid #96a6b9;
+}
+
+#pagesidebar nav ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 0.375em 0;
+}
+
+#pagesidebar nav li.currentpage a {
+    font-weight: 700;
+}
+
+/* Content style */
+
+#content {
+    padding-bottom: 2em;
+}
+#content ul,
+#content p,
+#content dl,
+#pagesidebar p {
+    margin-bottom: 1.25em;
+}
+
+#content dl {
+    width: 30%;
+    padding: 1em;
+    border: 4px solid #cad2db;
+    border-radius: 0.375em;
+}
+
+#content dt {
+    color: #714f2b;
+    font-family: 'roboto slabbold', Georgia, serif;
+    font-size: 1.25em;
+}
+
+#content dd {
+    font-style: italic;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #cad2db;
+}
+
+#content dd:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+#content li {
+    margin-bottom: 0.75em;
+}
+
+#content .highlightlist {
+	list-style-type:none;
+	padding-left:1em;
+}
+
+#content .highlightlist li {
+	padding-left: 20px;
+	background:url(../images/star2.png) 0 0.1em no-repeat;
+}
+
+/* Table styling */
+
+#content table, 
+#content td,
+#content th,
+#content caption {
+    border: 1px solid #96A6B9;
+}
+
+#content td,
+#content th,
+#content caption {
+    padding: 0.25em 0.5em;
+}
+
+#content table {
+    width:50%;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#content td {
+    text-align: center;
+}
+
+#content th {
+    background-color: #E2E7EC;
+    color: #2B4C71;
+}
+
+#content caption {
+    border-bottom-width: 0;
+    color: #714f2b;
+    font-family: 'roboto slabbold', Georgia, serif;
+    font-size: 1.25em;
+    text-align: left;
+}
+
+
+/* Media */
+
+figure.callout {
+    background-color: #e2e7ec;
+    border-radius: 0.375em;
+    box-shadow: 2px 2px 0 #999999;
+    padding: 1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    float: right;
+}
+
+figure#imagefigure{
+	width: 33%;
+}
+
+figure#imagefigure img{
+	max-width: 100%;
+	text-align: right;
+}
+
+.callout figcaption {
+    font-style: italic;
+    text-align: center;
+}
+
+/* Forms */
+
+textarea, input, select, option {
+    font-family: Arial, Verdana, Geneva, sans-serif;
+    color: #04080b; 
+    font-size: 0.875em;
+}
+
+label {
+    font-weight: bold;
+    width: 40%;
+    float: left;
+}
+
+form {
+    width: 50%;
+}
+
+fieldset {
+    padding: 1em;
+    border: 4px solid #cad2db;
+    border-radius: 0.375em;
+}
+
+.controlgroup {
+    padding-bottom: 1em;
+    clear: left;
+}
+
+textarea, input[type=text], input[type=email] {
+    width: 55%;
+}
+
+textarea {
+    height: 10em;
+}
+
+legend {
+    font-family: 'roboto slabbold', Georgia, serif;
+    font-size: 1.5em;
+    color: #714f2b;
+}
+
+/* Skip links */
+.skiplink {
+    position: absolute;
+    left: -10000px;
+}
+.skiplink:focus {
+    left: 0;
+    background-color:  #4c712b;
+    color: #ffff00;
+}
+
+
+/* Responsive element */
+
+@media screen and (max-width: 900px){
+	#pageheader nav {
+		float: left;
+	}
+}
+
+@media screen and (max-width: 700px){
+
+ /*
+    Make navigation bar sit below the site title.
+    */
+	
+	#pageheader nav {
+		float: none;
+		clear: both;
+	}
+	
+	 /*
+    Make the nav bar items display vertically
+    */
+	
+	#pageheader nav li {
+        float: none;
+        margin-right: 0;
+        margin-bottom: 0.5em;
+	}
+	
+	/*
+    Make the nav bar item links display vertically
+    */
+	
+	#pageheader nav li a {
+        float: none;
+    }
+	
+	/*
+    remove the "columns" from the two column layout by resetting their width 
+    and removing the float
+    */
+	
+    #pagesidebar {
+        width: auto;
+        float: none;
+    }
+    #columncontainer #content {
+        width: auto;
+        float: none;
+    }
+	
+	/*
+    Adjust the width of forms and tables so they fill the screen
+    */
+    form,
+    #content table {
+        width: 100%;
+    }
+    /*
+    Adjust the width of the description list. Not to 100% because of it's padding
+    */
+    #content dl {
+        width: 92%;
+    }
+    
+    /*
+    Make form labels sit above fields
+    */
+    label {
+        width: auto;
+        float: none;
+        display: block;
+    }
+
+}
+
+
